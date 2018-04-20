@@ -23,14 +23,12 @@ import static java.util.Collections.singletonList;
 public class ResourceServerConfig {
 
     private ResourceServerConfiguration resource() {
-        ResourceServerConfiguration resource = new ResourceServerConfiguration() {
+        return new ResourceServerConfiguration() {
             // Switch off the Spring Boot @Autowired configurers
             public void setConfigurers(List<ResourceServerConfigurer> configurers) {
                 super.setConfigurers(configurers);
             }
         };
-
-        return resource;
     }
 
     @Bean
@@ -79,6 +77,7 @@ public class ResourceServerConfig {
                         .hasAuthority("BAR");
             }
         }));
+
         resource.setOrder(4);
 
         return resource;

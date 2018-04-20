@@ -1,0 +1,3 @@
+security:
+  jwt:
+    signing-key: MaYzkSjmkzPC58L

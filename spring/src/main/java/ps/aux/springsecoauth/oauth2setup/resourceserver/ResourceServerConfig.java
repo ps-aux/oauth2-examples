@@ -37,7 +37,7 @@ public class ResourceServerConfig {
         resource.setConfigurers(singletonList(new ResourceServerConfigurerAdapter() {
 
             @Override
-            public void configure(ResourceServerSecurityConfigurer resources) throws Exception {
+            public void configure(ResourceServerSecurityConfigurer resources) {
                 resources.resourceId("foo");
             }
 
